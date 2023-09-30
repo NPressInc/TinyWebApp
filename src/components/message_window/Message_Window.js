@@ -15,13 +15,13 @@ function Message_Window() {
                     <div className="media media-chat">
                     </div>
         
-                <div className="ps-scrollbar-x-rail" style={{left: "0px", bottom: "0px"}}>
-                    <div className="ps-scrollbar-x" tabIndex="0" style={{left: "0px", width: "0px"}}>
+                    <div className="ps-scrollbar-x-rail" style={{left: "0px", bottom: "0px"}}>
+                        <div className="ps-scrollbar-x" tabIndex="0" style={{left: "0px", width: "0px"}}>
+                        </div>
                     </div>
-                </div>
-                <div className="ps-scrollbar-y-rail" style={{top: "0px", height: "0px", right: "2px"}}>
-                    <div className="ps-scrollbar-y" tabIndex="0" style={{top: "0px", height: "2px"}}>
-                    </div>
+                    <div className="ps-scrollbar-y-rail" style={{top: "0px", height: "0px", right: "2px"}}>
+                        <div className="ps-scrollbar-y" tabIndex="0" style={{top: "0px", height: "2px"}}>
+                        </div>
                     </div>
                 </div>
         
