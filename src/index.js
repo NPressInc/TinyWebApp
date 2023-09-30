@@ -1,13 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+//import "bootstrap/dist/css/bootstrap.min.css";
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Messaging from "./pages/Messaging";
+import Admin from "./pages/Admin";
+import Streaming from "./pages/Streaming";
+import Library from "./pages/Library";
+import Home from "./pages/Home"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+          <Route index element={<Home />} />
+          <Route path="/messaging" element={<Messaging />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/streaming" element={<Streaming />} />
+          <Route path="/library" element={<Library />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
