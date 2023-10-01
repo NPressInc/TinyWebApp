@@ -1,10 +1,10 @@
-import './Message_Window.css'
+import './MessageWindow.css'
 import '../../css/scrollbar.css';
 import { Send, Person }  from 'react-bootstrap-icons'
 
 function Message_Window() {
     return (
-        <div className="container container-small">
+        <div className="container">
             <div className="card card-bordered container_chat" >
                 <div className="card-header d-flex justify-content-center">
                     <h3 className="card-title"><strong>William</strong></h3>

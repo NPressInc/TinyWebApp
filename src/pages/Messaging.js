@@ -1,20 +1,21 @@
 import logo from '../logo.svg';
 import '../App.css';
-import Message_Window from '../components/message_window/Message_Window'; 
+import './Messaging.css'
+import Message_Window from '../components/MessageWindow/MessageWindow'; 
 import ChatPreview from '../components/ChatPreview/ChatPreview'; 
 
 
 function Messaging() {
   return (
-    <div className='row'>
-      <div className='col'>
+    <div className='d-flex flex-row'>
+      <div className='p-2 previewContainer'>
         <ChatPreview/>
       </div>
-      <div className='col'>
+      <div className='p-2 flex-fill'>
         <Message_Window/>
       </div>
-        
     </div>
+    
   );
 }
 
