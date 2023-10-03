@@ -1,19 +1,31 @@
 import './MessageWindow.css'
 import '../../css/scrollbar.css';
 import { Send, Person }  from 'react-bootstrap-icons'
+import { default as Bubble } from './Bubble'
+import React, { useState } from 'react';
 
-function Message_Window() {
+
+
+
+function Message_Window(props) {
+
+    const [conversation, setConversation] = useState(props.conversation);
     return (
         <div className="container">
             <div className="card card-bordered container_chat">
                 <div className="card-header d-flex justify-content-center">
-                    <h3 className="card-title"><strong>William</strong></h3>
+                    <h3 className="card-title"><strong>{ props.title }</strong></h3>
                 </div>
         
                 <div className="ps-container ps-theme-default ps-active-y messages_container" id="chat-content"> 
                     
                     <div className="media media-chat">
-                </div>
+                        {conversation.map(function(object, i){
+                            return <Bubble message={object.message} user={object.user}/>
+                        })}
+                        
+                        
+                    </div>
         
                     <div className="ps-scrollbar-x-rail" style={{left: "0px", bottom: "0px"}}>
                         <div className="ps-scrollbar-x" tabIndex="0" style={{left: "0px", width: "0px"}}>
@@ -25,9 +37,9 @@ function Message_Window() {
                     </div>
                 </div>
         
-                <div className="publisher bt-1 border-light">
+                <div className="publisher mb-1 bt-1 border-light">
                     <Person/>
-                    <input className="publisher-input" type="text" placeholder="Ask me anything..."/>
+                    <input className="publisher-input" type="text" placeholder="Type Message Here..."/>
                     <span className="publisher-btn file-group">
                     </span>
                     <a className="publisher-btn text-info" data-abc="true"><Send/></a>

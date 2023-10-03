@@ -4,6 +4,7 @@ import './Messaging.css'
 import Message_Window from '../components/MessageWindow/MessageWindow'; 
 import ChatPreview from '../components/ChatPreview/ChatPreview'; 
 
+var testConvo = [{"user":"self", "message":"test message", "type":"SMS"},{"user":"jim", "message":"test message", "type":"SMS"}, {"user":"james", "message":"test message", "type":"SMS"}]
 
 function Messaging() {
   return (
@@ -12,7 +13,7 @@ function Messaging() {
         <ChatPreview/>
       </div>
       <div className='p-2 flex-fill'>
-        <Message_Window/>
+        <Message_Window title="William" conversation={testConvo} />
       </div>
     </div>
     
