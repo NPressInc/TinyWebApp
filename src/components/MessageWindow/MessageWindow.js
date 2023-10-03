@@ -5,7 +5,7 @@ import { Send, Person }  from 'react-bootstrap-icons'
 function Message_Window() {
     return (
         <div className="container">
-            <div className="card card-bordered container_chat" >
+            <div className="card card-bordered container_chat">
                 <div className="card-header d-flex justify-content-center">
                     <h3 className="card-title"><strong>William</strong></h3>
                 </div>
@@ -13,7 +13,7 @@ function Message_Window() {
                 <div className="ps-container ps-theme-default ps-active-y messages_container" id="chat-content"> 
                     
                     <div className="media media-chat">
-                    </div>
+                </div>
         
                     <div className="ps-scrollbar-x-rail" style={{left: "0px", bottom: "0px"}}>
                         <div className="ps-scrollbar-x" tabIndex="0" style={{left: "0px", width: "0px"}}>
