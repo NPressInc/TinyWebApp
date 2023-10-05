@@ -19,13 +19,9 @@ function Message_Window(props) {
         
                 <div className="ps-container ps-theme-default ps-active-y messages_container" id="chat-content"> 
                     
-                    <div className="media media-chat">
                         {conversation.map(function(object, i){
                             return <Bubble message={object.message} user={object.user}/>
                         })}
-                        
-                        
-                    </div>
         
                     <div className="ps-scrollbar-x-rail" style={{left: "0px", bottom: "0px"}}>
                         <div className="ps-scrollbar-x" tabIndex="0" style={{left: "0px", width: "0px"}}>

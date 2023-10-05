@@ -256,7 +256,8 @@ h4.card-title {
 
 .media-chat {
     padding-right: 64px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
+    width: auto
 }
 
 .media-chat.media-chat-reverse .media-body p {

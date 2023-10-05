@@ -8,10 +8,12 @@ function chatTitle(user){
 function Bubble(props) {
     
     return (
-        <div className= {'media media-chat ' + (props.user == "self" ? 'media-chat-reverse': '')}>
-            {props.user != "self" && chatTitle(props.user)}
-            <div className="media-body">
-                <p>{props.message}</p>
+        <div style={{width: "100%", display: "inline-block"}}>
+            <div className= {'media media-chat ' + (props.user == "self" ? 'media-chat-reverse': '')}>
+                {props.user != "self" && chatTitle(props.user)}
+                <div className="media-body">
+                    <p>{props.message}</p>
+                </div>
             </div>
         </div>
     );
