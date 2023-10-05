@@ -20,7 +20,7 @@ function Message_Window(props) {
                 <div className="ps-container ps-theme-default ps-active-y messages_container" id="chat-content"> 
                     
                         {conversation.map(function(object, i){
-                            return <Bubble message={object.message} user={object.user}/>
+                            return <Bubble timestamp={object.timestamp} message={object.message} user={object.user}/>
                         })}
         
                     <div className="ps-scrollbar-x-rail" style={{left: "0px", bottom: "0px"}}>
