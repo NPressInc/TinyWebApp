@@ -1,0 +1,9 @@
+.PreviewCard {
+    background-color: #ffffff; /* Initial background color */
+    transition: background-color 0.3s; /* Smooth transition effect */
+  }
+  
+  /* This is the style that will be applied when you hover over the element */
+  .PreviewCard:hover {
+    background-color: #d6d6d6; /* New background color on hover */
+  }
