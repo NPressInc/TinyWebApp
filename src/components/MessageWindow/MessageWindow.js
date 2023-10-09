@@ -2,12 +2,45 @@ import './MessageWindow.css'
 import '../../css/scrollbar.css';
 import { Send, Person }  from 'react-bootstrap-icons'
 import { default as Bubble } from './Bubble'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 
 
 
 function Message_Window(props) {
+
+    function add_message_UI(messageObj){
+        console.log(messageObj)
+        console.log(conversation)
+        console.log("----------")
+        setConversation(oldArray => [...oldArray, messageObj])
+        console.log(conversation)
+    }
+
+    function write_message_from_input(){
+        let inputDoc = document.getElementById("messageContent")
+        let value = inputDoc.value
+        if(value){
+            add_message_UI({"timestamp":Date(Date.now()).toString(),"user":"self", "message":value, "type":"SMS"})
+            inputDoc.value = ""
+        }
+    }
+
+    function handleClickSend(){
+        write_message_from_input()
+    }
+
+
+
+    useEffect(() => {
+        var objDiv = document.getElementById("chat-content");
+        objDiv.scrollTop = objDiv.scrollHeight;
+        setTimeout(()=>{
+            //add_message_UI({"timestamp":"1:52 AM, October 5, 2023","user":"self", "message":"test message", "type":"SMS"})
+        }, 5000)
+      });
+
+
 
     const [conversation, setConversation] = useState(props.conversation);
     return (
@@ -35,10 +68,10 @@ function Message_Window(props) {
         
                 <div className="publisher mb-1 bt-1 border-light">
                     <Person/>
-                    <input className="publisher-input" type="text" placeholder="Type Message Here..."/>
+                    <input className="publisher-input" id="messageContent" type="text" placeholder="Type Message Here..."/>
                     <span className="publisher-btn file-group">
                     </span>
-                    <a className="publisher-btn text-info" data-abc="true"><Send/></a>
+                    <a onClick={handleClickSend} className="publisher-btn text-info" data-abc="true"><Send/></a>
                 </div>
             </div>
         </div>

@@ -151,7 +151,6 @@ h4.card-title {
 .ps-container {
     -ms-touch-action: auto;
     touch-action: auto;
-    overflow: hidden!important;
     -ms-overflow-style: none;
 }
 
@@ -189,13 +188,9 @@ h4.card-title {
     display: table;
 }
 
-.media-body {
-    min-width: 0;
-}
-
 .media-chat .media-body p {
     position: relative;
-    padding: 6px 8px;
+    padding: 4px 6px;
     margin: 4px 0;
     background-color: #f5f6f7;
     border-radius: 3px;
@@ -251,7 +246,6 @@ h4.card-title {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
     flex-direction: row-reverse;
-    overflow-wrap: break-word;
 }
 
 .media-chat {
@@ -266,16 +260,9 @@ h4.card-title {
     color: #fff;
 }
 
-.media-chat .media-body p {
-    position: relative;
-    padding: 6px 8px;
-    margin: 4px 0;
-    background-color: #f5f6f7;
-    border-radius: 3px;
-    max-width: 95%;
-    overflow-wrap: break-word;
+.media-body-reverse {
+    float: right;
 }
-
 
 .border-light {
     border-color: #f1f2f3 !important;

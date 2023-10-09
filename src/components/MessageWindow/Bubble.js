@@ -16,7 +16,7 @@ function Bubble(props) {
             {props.timestamp && timestamp(props.timestamp)}
             <div className= {'media media-chat ' + (props.user == "self" ? 'media-chat-reverse': '')}>
                 {props.user != "self" && chatTitle(props.user)}
-                <div className="media-body">
+                <div className={"media-body " + (props.user == "self" ? "media-body-reverse": "")}>
                     <p>{props.message}</p>
                 </div>
                 
