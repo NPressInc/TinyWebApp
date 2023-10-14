@@ -30,14 +30,15 @@ function Message_Window(props) {
         write_message_from_input()
     }
 
-
+    const userMessageSubmit = (event) => {
+        if(event.key === 'Enter') {
+           write_message_from_input();
+        }
+    }
 
     useEffect(() => {
         var objDiv = document.getElementById("chat-content");
         objDiv.scrollTop = objDiv.scrollHeight;
-        setTimeout(()=>{
-            //add_message_UI({"timestamp":"1:52 AM, October 5, 2023","user":"self", "message":"test message", "type":"SMS"})
-        }, 5000)
       });
 
 
@@ -68,7 +69,7 @@ function Message_Window(props) {
         
                 <div className="publisher mb-1 bt-1 border-light">
                     <Person/>
-                    <input className="publisher-input" id="messageContent" type="text" placeholder="Type Message Here..."/>
+                    <input className="publisher-input" id="messageContent" type="text" onKeyDown={userMessageSubmit} placeholder="Type Message Here..."/>
                     <span className="publisher-btn file-group">
                     </span>
                     <a onClick={handleClickSend} className="publisher-btn text-info" data-abc="true"><Send/></a>
